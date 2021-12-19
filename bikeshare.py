@@ -12,7 +12,6 @@ name = user_name
 def get_filters():
     """
     Asks user to specify a city, month, and day to analyze.
-
     Returns:
         (str) city - name of the city to analyze
         (str) month - name of the month to filter by, or "all" to apply no month filter
@@ -21,9 +20,6 @@ def get_filters():
     chicago = 'chicago'
     washington = 'washington'
     new_york = 'new york'
-
-
-
 
     print('\nHello {}, Let\'s explore some US bikeshare data!\n'.format(user_name))
     print('*****************************************************************************************************************************************************\n')
@@ -75,7 +71,6 @@ CITY_DATA = { 'chicago': 'chicago.csv',
 def load_data(city, month, day):
     """
     Loads data for the specified city and filters by month and day if applicable.
-
     Args:
         (str) city - name of the city to analyze
         (str) month - name of the month to filter by, or "all" to apply no month filter
