@@ -12,7 +12,6 @@ name = user_name
 def get_filters():
     """
     Asks user to specify a city, month, and day to analyze.
-
     Returns:
         (str) city -The name of the city to analyze
         (str) month -The name of the month to filter by, or "all" to apply no month filter
@@ -21,9 +20,6 @@ def get_filters():
     chicago = 'chicago'
     washington = 'washington'
     new_york = 'new york'
-
-
-
 
     print('\nHello {}, Let\'s explore some US bikeshare data!\n'.format(user_name))
     print('*****************************************************************************************************************************************************\n')
@@ -75,7 +71,6 @@ CITY_DATA = { 'chicago': 'chicago.csv',
 def load_data(city, month, day):
     """
     Loads data for the specified city and filters by month and day if applicable.
-
     Args:
         (str) city - The name of the city to analyze
         (str) month - The name of the month to filter by, or "all" to apply no month filter
@@ -114,7 +109,6 @@ def load_data(city, month, day):
 
     return df
 
-
 def time_stats(df):
     """Displays statistics on the most frequent times of travel."""
 
@@ -136,7 +130,6 @@ def time_stats(df):
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
-
 
 def station_stats(df):
     """Displays statistics on the most popular stations and trip."""
@@ -180,7 +173,6 @@ def trip_duration_stats(df):
     print("\nThis took %s seconds." %(time.time() - start_time))
     print('-'*40)
 
-
 def user_stats(df):
     """Displays statistics on bikeshare users."""
 
@@ -221,7 +213,6 @@ def display_data(df):
         # Retrieve data and convert to json format and then split each json row data
         row_data = df.iloc[i: i + 5].to_json(orient='records', lines=True).split('\n')
         for row in row_data:
-
             # Pretty print each user data
             parsed_row = json.loads(row)
             json_row = json.dumps(parsed_row, indent=2)
