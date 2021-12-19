@@ -114,7 +114,6 @@ def load_data(city, month, day):
 
     return df
 
-
 def time_stats(df):
     """Displays statistics on the most frequent times of travel."""
 
@@ -136,7 +135,6 @@ def time_stats(df):
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
-
 
 def station_stats(df):
     """Displays statistics on the most popular stations and trip."""
@@ -180,7 +178,6 @@ def trip_duration_stats(df):
     print("\nThis took %s seconds." %(time.time() - start_time))
     print('-'*40)
 
-
 def user_stats(df):
     """Displays statistics on bikeshare users."""
 
@@ -221,7 +218,6 @@ def display_data(df):
         # Retrieve data and convert to json format and then split each json row data
         row_data = df.iloc[i: i + 5].to_json(orient='records', lines=True).split('\n')
         for row in row_data:
-
             # Pretty print each user data
             parsed_row = json.loads(row)
             json_row = json.dumps(parsed_row, indent=2)
